@@ -69,4 +69,10 @@ class RomanIntConvertorTest {
         int result = romanIntConvertor.RomanToInt("II");
         assertEquals(2, result);
     }
+
+    @Test
+    void shouldReturn3WhenIII() {
+        int result = romanIntConvertor.RomanToInt("III");
+        assertEquals(3, result);
+    }
 }
