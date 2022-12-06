@@ -31,11 +31,17 @@ public class RomanIntConvertor {
         else if (number == 0)
             return "";
         else {
-            if (number == 1)
-                return "I";
+            return String.valueOf(convertIntToLetter(number));
         }
-        return "A";
      }
+
+    private char convertIntToLetter(int number) {
+        return switch (number) {
+            case 1 -> 'I';
+            case 5 ->  'V';
+            default -> 'A';
+        };
+    }
 
     private static int convertLetterToInt(char romanNumber) {
         return switch (romanNumber) {
