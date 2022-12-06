@@ -4,6 +4,11 @@ public class RomanIntConvertor {
         if (romanNumber.isEmpty()) {
             return 0;
         }
+        else {
+            if (romanNumber.equals("I"))
+                return 1;
+
+        }
         return -1;
     }
 }

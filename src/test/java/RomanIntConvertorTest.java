@@ -10,4 +10,12 @@ class RomanIntConvertorTest {
         int result = romanIntConvertor.RomanToInt("");
         assertEquals(0, result);
     }
+
+    @Test
+    void shouldReturn1WhenI() {
+        RomanIntConvertor romanIntConvertor = new RomanIntConvertor();
+        int result = romanIntConvertor.RomanToInt("I");
+        assertEquals(1, result);
+    }
+
 }
