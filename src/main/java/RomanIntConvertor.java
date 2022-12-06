@@ -7,7 +7,8 @@ public class RomanIntConvertor {
         else {
             if (romanNumber.equals("I"))
                 return 1;
-
+            else if (romanNumber.equals("V"))
+                return 5;
         }
         return -1;
     }
