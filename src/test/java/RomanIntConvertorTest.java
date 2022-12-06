@@ -182,4 +182,9 @@ class RomanIntConvertorTest {
         String result = romanIntConvertor.IntToRoman(1000);
         assertEquals("M", result);
     }
+
+    @Test
+    void shouldThrowWhenInvalid() {
+        assertThrows(IllegalArgumentException.class, () -> romanIntConvertor.IntToRoman(3));
+    }
 }

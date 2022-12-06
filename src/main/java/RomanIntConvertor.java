@@ -44,7 +44,7 @@ public class RomanIntConvertor {
             case 100 -> 'C';
             case 500 -> 'D';
             case 1000 -> 'M';
-            default -> 'A';
+            default -> throw new IllegalArgumentException("Invalid Number");
         };
     }
 
