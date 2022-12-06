@@ -59,4 +59,9 @@ class RomanIntConvertorTest {
         assertEquals(1000, result);
     }
 
+    @Test
+    void shouldThrowExceptionWhenInvalid() {
+        assertThrows(IllegalArgumentException.class, () -> romanIntConvertor.RomanToInt("A"));
+    }
+
 }
