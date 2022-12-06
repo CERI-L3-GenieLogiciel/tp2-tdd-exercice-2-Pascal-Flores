@@ -138,6 +138,10 @@ class RomanIntConvertorTest {
     }
 
     @Test
+    void shouldThrowExceptionWhenNegative() {
+        assertThrows(IllegalArgumentException.class, () -> romanIntConvertor.IntToRoman(-1));
+    }
+    @Test
     void shouldReturnIWhen1() {
         String result = romanIntConvertor.IntToRoman(1);
         assertEquals("I", result);

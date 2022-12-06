@@ -26,7 +26,9 @@ public class RomanIntConvertor {
     }
 
     public String IntToRoman(int number) {
-        if (number == 0)
+        if (number < 0)
+            throw new IllegalArgumentException("Invalid Number");
+        else if (number == 0)
             return "";
         else {
             if (number == 1)
