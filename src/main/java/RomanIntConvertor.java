@@ -51,6 +51,10 @@ public class RomanIntConvertor {
                 }
                 else if (numberList.get(i) == 5)
                     result += convertIntToLetter(5 * (int) Math.pow(10, numberList.size() - 1 - i));
+                else if (numberList.get(i) == 9) {
+                    temp =  String.valueOf(convertIntToLetter((int) Math.pow(10, numberList.size() -1 - i)))
+                            + String.valueOf(convertIntToLetter((int) Math.pow(10, numberList.size() - i)));
+                }
                 else
                     for (int j = 0; j < numberList.get(i); j++) {
                         result += convertIntToLetter((int) Math.pow(10, numberList.size() - 1 - i));
