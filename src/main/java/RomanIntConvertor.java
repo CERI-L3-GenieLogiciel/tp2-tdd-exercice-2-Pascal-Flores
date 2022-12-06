@@ -25,6 +25,11 @@ public class RomanIntConvertor {
         }
     }
 
+    public String IntToRoman(int number) {
+        if (number == 0)
+            return "";
+        return "A";
+     }
 
     private static int convertLetterToInt(char romanNumber) {
         return switch (romanNumber) {

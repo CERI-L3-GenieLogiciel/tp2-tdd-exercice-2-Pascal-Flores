@@ -11,6 +11,10 @@ class RomanIntConvertorTest {
     void init() {
         romanIntConvertor = new RomanIntConvertor();
     }
+
+    /////////////////////////
+    // Test for RomanToInt //
+    /////////////////////////
     @Test
     void shouldReturn0WhenEmpty() {
         int result = romanIntConvertor.RomanToInt("");
@@ -121,5 +125,15 @@ class RomanIntConvertorTest {
     @Test
     void shouldThrowExceptionWhenMoreThan3SameLetters() {
         assertThrows(IllegalArgumentException.class, () -> romanIntConvertor.RomanToInt("IIII"));
+    }
+
+    /////////////////////////
+    // Test for IntToRoman //
+    /////////////////////////
+
+    @Test
+    void shouldReturnEmptyWhen0() {
+        String result = romanIntConvertor.IntToRoman(0);
+        assertEquals("", result);
     }
 }
