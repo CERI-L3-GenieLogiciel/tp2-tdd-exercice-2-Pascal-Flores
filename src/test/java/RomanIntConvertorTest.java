@@ -64,4 +64,9 @@ class RomanIntConvertorTest {
         assertThrows(IllegalArgumentException.class, () -> romanIntConvertor.RomanToInt("A"));
     }
 
+    @Test
+    void shouldReturn2WhenII() {
+        int result = romanIntConvertor.RomanToInt("II");
+        assertEquals(2, result);
+    }
 }
