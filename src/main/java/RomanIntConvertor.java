@@ -7,7 +7,10 @@ public class RomanIntConvertor {
         }
         else {
             for (char letter : romanNumber.toCharArray()) {
-                result+= convertLetterToInt(letter);
+                if(convertLetterToInt(letter) == 5 && result != 0)
+                    result += convertLetterToInt(letter) - 2;
+                else
+                    result += convertLetterToInt(letter);
             }
             return result;
         }
