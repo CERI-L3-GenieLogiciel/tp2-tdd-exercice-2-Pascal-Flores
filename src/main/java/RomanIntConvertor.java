@@ -11,6 +11,7 @@ public class RomanIntConvertor {
                 case "X" -> 10;
                 case "L" -> 50;
                 case "C" -> 100;
+                case "D" -> 500;
                 default -> -1;
             };
         }
