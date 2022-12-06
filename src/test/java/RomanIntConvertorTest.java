@@ -117,4 +117,9 @@ class RomanIntConvertorTest {
         int result = romanIntConvertor.RomanToInt("MCMXCIV");
         assertEquals(1994, result);
     }
+
+    @Test
+    void shouldThrowExceptionWhenMoreThan3SameLetters() {
+        assertThrows(IllegalArgumentException.class, () -> romanIntConvertor.RomanToInt("IIII"));
+    }
 }

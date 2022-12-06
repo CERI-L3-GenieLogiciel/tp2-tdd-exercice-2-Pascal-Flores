@@ -1,3 +1,5 @@
+import java.util.regex.Pattern;
+
 public class RomanIntConvertor {
 
     public int RomanToInt(String romanNumber) {
@@ -6,6 +8,9 @@ public class RomanIntConvertor {
             return 0;
         }
         else {
+            if (Pattern.matches("([IVXLC]){4,}", romanNumber))
+                throw new IllegalArgumentException("Invalid Roman Number");
+
             char lastChar = romanNumber.charAt(0);
             for (char letter : romanNumber.toCharArray()) {
                 if (convertLetterToInt(letter) == convertLetterToInt(lastChar) * 10 || convertLetterToInt(letter) == convertLetterToInt(lastChar) * 5) {
@@ -19,6 +24,7 @@ public class RomanIntConvertor {
             return result;
         }
     }
+
 
     private static int convertLetterToInt(char romanNumber) {
         return switch (romanNumber) {
