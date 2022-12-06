@@ -44,12 +44,18 @@ public class RomanIntConvertor {
             }
             Collections.reverse(numberList);
             for (int i = 0; i < numberList.size(); i++) {
-                if (numberList.get(i) == 5)
+                String temp = "";
+                if (numberList.get(i) == 4) {
+                    temp =  String.valueOf(convertIntToLetter((int) Math.pow(10, numberList.size() - i - 1)))
+                            + String.valueOf(convertIntToLetter((int) Math.pow(10, numberList.size() - i -1)*5));
+                }
+                else if (numberList.get(i) == 5)
                     result += convertIntToLetter(5 * (int) Math.pow(10, numberList.size() - 1 - i));
                 else
                     for (int j = 0; j < numberList.get(i); j++) {
                         result += convertIntToLetter((int) Math.pow(10, numberList.size() - 1 - i));
                     }
+                result += temp;
             }
             return result;
         }
