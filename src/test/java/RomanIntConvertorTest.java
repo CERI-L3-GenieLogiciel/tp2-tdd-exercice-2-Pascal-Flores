@@ -206,4 +206,22 @@ class RomanIntConvertorTest {
         String result = romanIntConvertor.IntToRoman(9);
         assertEquals("IX", result);
     }
+
+    @Test
+    void shouldReturnXIVWhen14() {
+        String result = romanIntConvertor.IntToRoman(14);
+        assertEquals("XIV", result);
+    }
+
+    @Test
+    void shouldReturnXCWhen90() {
+        String result = romanIntConvertor.IntToRoman(90);
+        assertEquals("XC", result);
+    }
+
+    @Test
+    void shouldReturnMCMXCIVWhen1994() {
+        String result = romanIntConvertor.IntToRoman(1994);
+        assertEquals("MCMXCIV", result);
+    }
 }
