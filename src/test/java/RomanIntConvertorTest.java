@@ -81,4 +81,11 @@ class RomanIntConvertorTest {
         int result = romanIntConvertor.RomanToInt("IV");
         assertEquals(4, result);
     }
+
+    @Test
+    void shouldReturn9WhenIX() {
+        int result = romanIntConvertor.RomanToInt("IX");
+        assertEquals(9, result);
+    }
+
 }

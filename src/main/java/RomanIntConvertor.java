@@ -6,11 +6,14 @@ public class RomanIntConvertor {
             return 0;
         }
         else {
+            char lastChar = romanNumber.charAt(0);
             for (char letter : romanNumber.toCharArray()) {
-                if(convertLetterToInt(letter) == 5 && result != 0)
-                    result += convertLetterToInt(letter) - 2;
-                else
+                if (convertLetterToInt(letter) == convertLetterToInt(lastChar) * 10 || convertLetterToInt(letter) == convertLetterToInt(lastChar) * 5) {
+                    result += convertLetterToInt(letter) - 2 * convertLetterToInt(lastChar);
+                }
+                else {
                     result += convertLetterToInt(letter);
+                }
             }
             return result;
         }
