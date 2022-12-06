@@ -14,6 +14,7 @@ public class RomanIntConvertor {
                 else {
                     result += convertLetterToInt(letter);
                 }
+                lastChar = letter;
             }
             return result;
         }
