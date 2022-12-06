@@ -5,15 +5,14 @@ public class RomanIntConvertor {
             return 0;
         }
         else {
-            if (romanNumber.equals("I"))
-                return 1;
-            else if (romanNumber.equals("V"))
-                return 5;
-            else if (romanNumber.equals("X"))
-                return 10;
-            else if (romanNumber.equals("L"))
-                return 50;
+            return switch (romanNumber) {
+                case "I" -> 1;
+                case "V" -> 5;
+                case "X" -> 10;
+                case "L" -> 50;
+                case "C" -> 100;
+                default -> -1;
+            };
         }
-        return -1;
     }
 }
