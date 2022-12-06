@@ -28,6 +28,10 @@ public class RomanIntConvertor {
     public String IntToRoman(int number) {
         if (number == 0)
             return "";
+        else {
+            if (number == 1)
+                return "I";
+        }
         return "A";
      }
 
