@@ -158,4 +158,28 @@ class RomanIntConvertorTest {
         String result = romanIntConvertor.IntToRoman(10);
         assertEquals("X", result);
     }
+
+    @Test
+    void shouldReturnLWhen50() {
+        String result = romanIntConvertor.IntToRoman(50);
+        assertEquals("L", result);
+    }
+
+    @Test
+    void shouldReturnCWhen100() {
+        String result = romanIntConvertor.IntToRoman(100);
+        assertEquals("C", result);
+    }
+
+    @Test
+    void shouldReturnDWhen500() {
+        String result = romanIntConvertor.IntToRoman(500);
+        assertEquals("D", result);
+    }
+
+    @Test
+    void shouldReturnMWhen1000() {
+        String result = romanIntConvertor.IntToRoman(1000);
+        assertEquals("M", result);
+    }
 }
