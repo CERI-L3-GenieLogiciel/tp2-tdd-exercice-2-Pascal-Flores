@@ -53,4 +53,10 @@ class RomanIntConvertorTest {
         assertEquals(500, result);
     }
 
+    @Test
+    void shouldReturn1000WhenM() {
+        int result = romanIntConvertor.RomanToInt("M");
+        assertEquals(1000, result);
+    }
+
 }

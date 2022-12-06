@@ -5,15 +5,20 @@ public class RomanIntConvertor {
             return 0;
         }
         else {
-            return switch (romanNumber) {
-                case "I" -> 1;
-                case "V" -> 5;
-                case "X" -> 10;
-                case "L" -> 50;
-                case "C" -> 100;
-                case "D" -> 500;
-                default -> -1;
-            };
+            return convertLetterToInt(romanNumber);
         }
+    }
+
+    private static int convertLetterToInt(String romanNumber) {
+        return switch (romanNumber) {
+            case "I" -> 1;
+            case "V" -> 5;
+            case "X" -> 10;
+            case "L" -> 50;
+            case "C" -> 100;
+            case "D" -> 500;
+            case "M" -> 1000;
+            default -> -1;
+        };
     }
 }
