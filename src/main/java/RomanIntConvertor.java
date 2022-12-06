@@ -11,6 +11,8 @@ public class RomanIntConvertor {
                 return 5;
             else if (romanNumber.equals("X"))
                 return 10;
+            else if (romanNumber.equals("L"))
+                return 50;
         }
         return -1;
     }
