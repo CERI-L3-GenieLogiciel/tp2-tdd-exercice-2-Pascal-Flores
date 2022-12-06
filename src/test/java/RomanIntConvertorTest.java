@@ -94,4 +94,27 @@ class RomanIntConvertorTest {
         assertEquals(14, result);
     }
 
+    @Test
+    void shouldReturn90WhenXC() {
+        int result = romanIntConvertor.RomanToInt("XC");
+        assertEquals(90, result);
+    }
+
+    @Test
+    void shouldReturn400WhenCD() {
+        int result = romanIntConvertor.RomanToInt("CD");
+        assertEquals(400, result);
+    }
+
+    @Test
+    void shouldReturn900WhenCM() {
+        int result = romanIntConvertor.RomanToInt("CM");
+        assertEquals(900, result);
+    }
+
+    @Test
+    void shouldReturn1994WhenMCMXCIV() {
+        int result = romanIntConvertor.RomanToInt("MCMXCIV");
+        assertEquals(1994, result);
+    }
 }
