@@ -184,7 +184,8 @@ class RomanIntConvertorTest {
     }
 
     @Test
-    void shouldThrowWhenInvalid() {
-        assertThrows(IllegalArgumentException.class, () -> romanIntConvertor.IntToRoman(3));
+    void shouldReturnIIWhen2() {
+        String result = romanIntConvertor.IntToRoman(2);
+        assertEquals("II", result);
     }
 }

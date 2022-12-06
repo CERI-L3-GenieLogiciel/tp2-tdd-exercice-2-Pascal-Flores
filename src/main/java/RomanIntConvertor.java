@@ -1,7 +1,12 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.regex.Pattern;
 
 public class RomanIntConvertor {
 
+    ////////////
+    // public //
+    ////////////
     public int RomanToInt(String romanNumber) {
         int result = 0;
         if (romanNumber.isEmpty()) {
@@ -31,10 +36,29 @@ public class RomanIntConvertor {
         else if (number == 0)
             return "";
         else {
-            return String.valueOf(convertIntToLetter(number));
+            String result = "";
+            ArrayList<Integer> numberList = new ArrayList<>();
+            while (number > 0) {
+                numberList.add(number % 10);
+                number /= 10;
+            }
+            Collections.reverse(numberList);
+            for (int i = 0; i < numberList.size(); i++) {
+                if (numberList.get(i) == 5)
+                    result += convertIntToLetter(5 * (int) Math.pow(10, numberList.size() - 1 - i));
+                else
+                    for (int j = 0; j < numberList.get(i); j++) {
+                        result += convertIntToLetter((int) Math.pow(10, numberList.size() - 1 - i));
+                    }
+            }
+            return result;
         }
-     }
+    }
 
+
+    /////////////
+    // private //
+    /////////////
     private char convertIntToLetter(int number) {
         return switch (number) {
             case 1 -> 'I';
