@@ -152,4 +152,10 @@ class RomanIntConvertorTest {
         String result = romanIntConvertor.IntToRoman(5);
         assertEquals("V", result);
     }
+
+    @Test
+    void shouldReturnXWhen10() {
+        String result = romanIntConvertor.IntToRoman(10);
+        assertEquals("X", result);
+    }
 }

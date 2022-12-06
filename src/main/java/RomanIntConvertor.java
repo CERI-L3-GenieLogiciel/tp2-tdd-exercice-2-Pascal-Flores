@@ -39,6 +39,7 @@ public class RomanIntConvertor {
         return switch (number) {
             case 1 -> 'I';
             case 5 ->  'V';
+            case 10 -> 'X';
             default -> 'A';
         };
     }
